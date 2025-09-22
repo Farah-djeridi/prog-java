@@ -1,8 +1,8 @@
 public class animal {
-    String family;
-    String name;
-    int age;
-    boolean isMammal;
+    private String family;
+    private String name;
+    private int age;
+    private boolean isMammal;
 
     public animal(String family, String name, int age, boolean isMammal) {
         this.family = family;
@@ -10,6 +10,11 @@ public class animal {
         this.age = age;
         this.isMammal = isMammal;
     }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return "Animal{" +

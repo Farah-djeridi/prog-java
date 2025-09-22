@@ -1,23 +1,38 @@
 public class Main {
     public static void main(String[] args) {
-
         animal lion = new animal("Felidae", "Lion", 5, true);
         animal tiger = new animal("Felidae", "Tiger", 4, true);
         animal crocodile = new animal("Crocodylidae", "Crocodile", 12, false);
-        Zoo myZoo = new Zoo("Safari Park", "Tunis", 20);
 
-        myZoo.animals[0] = lion;
-        myZoo.animals[1] = tiger;
-        myZoo.animals[2] = crocodile;
+        Zoo myZoo = new Zoo("Safari Park", "Tunis");
+
+
+        myZoo.addAnimal(lion);
+        myZoo.addAnimal(tiger);
+        myZoo.addAnimal(crocodile);
+
+
+        for (int i = 0; i < 30; i++) {
+            myZoo.addAnimal(new animal("Test", "Animal" + i, i, true));
+        }
 
         myZoo.displayZoo();
+        myZoo.displayAnimals();
 
-        System.out.println("-----");
+
+        System.out.println("Recherche du Lion → index : " + myZoo.searchAnimal(lion));
 
 
-        System.out.println(myZoo);
-        System.out.println(lion);
-        System.out.println(tiger);
-        System.out.println(crocodile);
+        animal lion2 = new animal("Felidae", "Lion", 6, true);
+        System.out.println("Recherche Lion2 → index : " + myZoo.searchAnimal(lion2));
+
+
+        System.out.println("Suppression du Lion : " + myZoo.removeAnimal(lion));
+        myZoo.displayAnimals();
+
+
+        Zoo zoo2 = new Zoo("Friguia", "Hammamet");
+        zoo2.addAnimal(new animal("Canidae", "Fox", 3, true));
+        System.out.println("Zoo avec plus d’animaux : " + Zoo.comparerZoo(myZoo, zoo2));
     }
 }
