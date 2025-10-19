@@ -1,7 +1,5 @@
 package entities;
 
-
-
 public class animal {
     private String family;
     private String name;
@@ -47,4 +45,3 @@ public class animal {
                 '}';
     }
 }
-
