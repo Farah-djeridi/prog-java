@@ -25,7 +25,7 @@ public class Main {
         societe.displayEmploye();
 
         System.out.println("\n=== Recherche par nom 'Sami' ===");
-        System.out.println(societe.rechercherEmploye("Sami") ? "Trouvé ✅" : "Non trouvé ❌");
+        System.out.println(societe.rechercherEmploye("Sami") ? "Trouvé " : "Non trouvé ");
 
         System.out.println("\n=== Recherche par département 'Informatique' ===");
         for (Employe e : societe.rechercherParDepartement("Informatique")) {
